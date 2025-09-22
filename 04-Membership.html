@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Plans</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      background: url("https://cdn.magicdecor.in/com/2023/10/13182750/I-love-gym-M.jpg") no-repeat center center/cover;
+      color: white;
+    }
+
+    /* Sticky Navbar */
+    .header {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 25px;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .left img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+
+    .logo-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .mid {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 18px;
+    }
+
+    .navbar li a {
+      padding: 10px 18px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar li a:hover {
+      color: #FFD700;
+      background: rgba(255, 215, 0, 0.2);
+    }
+
+    .right {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      background: black;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background: gainsboro;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    /* Membership Section */
+    main {
+      text-align: center;
+      padding: 50px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    main h1 {
+      font-size: 3rem;
+      color: #FFD700;
+      text-shadow: 2px 2px 6px black;
+      margin-bottom: 10px;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      color: gainsboro;
+    }
+
+    .plans-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .plan {
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeUp 1.5s ease-in-out;
+    }
+
+    .plan:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+    }
+
+    .plan h2 {
+      color: #FFD700;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 2rem;
+      margin: 15px 0;
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+
+    .plan ul li {
+      margin: 10px 0;
+      padding-left: 22px;
+      position: relative;
+    }
+
+    .plan ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #FFD700;
+      font-weight: bold;
+    }
+
+    .join-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #FFD700;
+      color: black;
+      padding: 12px 22px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .join-btn:hover {
+      background: #e6c200;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #FFD700;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .plans-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="header">
+    <div class="left">
+      <img src="https://cdn.vectorstock.com/i/1000v/42/27/bodybuilder-male-figure-icon-gym-logo-template-vector-46454227.jpg" alt="Gym Logo">
+      <div class="logo-text">Welcome To My Gym</div>
+    </div>
+    <div class="mid">
+      <ul class="navbar">
+        <li><a href="01-Gym site.html">Home</a></li>
+        <li><a href="03-about.html">About</a></li>
+        <li><a href="04-Membership.html">Get Membership</a></li>
+        <li><a href="02-contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <button class="btn">Call us Now</button>
+      <button class="btn">Email us</button>
+    </div>
+  </header>
+
+  <!-- Membership Section -->
+  <main>
+    <h1>Membership Plans</h1>
+    <p>Choose the plan that fits your fitness journey</p>
+
+    <section class="plans-container">
+      <div class="plan">
+        <h2>Basic</h2>
+        <p class="price">$20 / month</p>
+        <ul>
+          <li>Access to gym equipment</li>
+          <li>Locker room access</li>
+          <li>Open gym hours</li>
+        </ul>
+        <button class="join-btn">Join Now</button>
+      </div>
+
+      <div class="plan">
+        <h2>Standard</h2>
+        <p class="price">$40 / month</p>
+        <ul>
+          <li>Everything in Basic</li>
+          <li>Group classes (Yoga, HIIT, Zumba)</li>
+          <li>1 Personal training session / month</li>
+        </ul>
+        <button class="join-btn">Join Now</button>
+      </div>
+
+      <div class="plan">
+        <h2>Premium</h2>
+        <p class="price">$70 / month</p>
+        <ul>
+          <li>Everything in Standard</li>
+          <li>Unlimited personal training</li>
+          <li>Nutrition & diet planning</li>
+          <li>24/7 gym access</li>
+        </ul>
+        <button class="join-btn">Join Now</button>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

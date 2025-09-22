@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GYM site</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      background: url("https://cdn.magicdecor.in/com/2023/10/13182750/I-love-gym-M.jpg") no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    /* Sticky Navbar */
+    .header {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .left img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+
+    /* Restored: White text */
+    .logo-text {
+      margin-left: 12px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .mid {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 15px;
+    }
+
+    .navbar li a {
+      padding: 10px 18px;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar li a:hover {
+      background: rgba(255, 215, 0, 0.3);
+      color: #FFD700;
+    }
+
+    .right {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Restored: Black background, white text */
+    .btn {
+      background: black;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: gainsboro;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    /* Hero Section */
+    main {
+      position: relative;
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: linear-gradient(rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.6));
+    }
+
+    main h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #FFD700;
+      text-shadow: 2px 2px 10px black;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 40px auto;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .container01 {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      width: 500px;
+      gap: 20px;
+      transition: transform 0.3s;
+    }
+
+    .container01:hover {
+      transform: translateY(-5px);
+    }
+
+    .content-block {
+      flex: 1;
+      text-align: left;
+    }
+
+    #text-01 {
+      margin: 0;
+      font-size: 1.6rem;
+      color: white;
+    }
+
+    .text-02 {
+      color: #FFD700;
+      font-size: 1rem;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    .container01 img {
+      width: 40%;
+      border-radius: 10px;
+    }
+
+    .join-button {
+      background: #FFD700;
+      color: black;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: all 0.3s;
+    }
+
+    .join-button:hover {
+      background: #e6c200;
+      transform: scale(1.08);
+      box-shadow: 0 0 10px #FFD700;
+    }
+
+    /* Right Section */
+    .container02 {
+      width: 500px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .container02:hover {
+      transform: translateY(-5px);
+    }
+
+    .container02 h2 {
+      color: #FFD700;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container02 ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .container02 li {
+      color: white;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #FFD700;
+      transition: all ease-in-out 0.3s;
+    }
+
+    .container02 li:hover {
+      background: rgba(255, 215, 0, 0.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container01,
+      .container02 {
+        width: 90%;
+      }
+
+      main h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="header">
+    <div class="left">
+      <img src="https://cdn.vectorstock.com/i/1000v/42/27/bodybuilder-male-figure-icon-gym-logo-template-vector-46454227.jpg"
+        alt="Gym Logo">
+      <div class="logo-text">Welcome To My Gym</div>
+    </div>
+    <div class="mid">
+      <ul class="navbar">
+        <li><a href="01-Gym site.html">Home</a></li>
+        <li><a href="03-about.html">About</a></li>
+        <li><a href="04-Membership.html">Get Membership</a></li>
+        <li><a href="02-contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <button class="btn">Call us Now</button>
+      <button class="btn">Email us</button>
+    </div>
+  </header>
+
+  <!-- Hero & Content -->
+  <main>
+    <h1>Transform Your Body, Transform Your Life</h1>
+    <div class="content-wrapper">
+      <!-- Left Box -->
+      <div class="container01">
+        <div class="content-block">
+          <h3 id="text-01">Push Your Limits Now</h3>
+          <p class="text-02">
+            Start your fitness journey today. Join our gym and become part of a community dedicated to
+            helping you achieve your goals. Whether you want to build muscle, lose weight, or simply
+            live a healthier life, our expert trainers will guide you every step of the way.
+          </p>
+          <button class="join-button">Join Us Now</button>
+        </div>
+        <img
+          src="https://media.istockphoto.com/id/1449353914/photo/fitness-gym-and-black-man-doing-a-workout-with-weights-for-strength-wellness-and-training.jpg?s=612x612&w=0&k=20&c=ozKkP-4W7Fg7c77s3-gE7QsxX51BJVEKi6LOxIMk8M0="
+          alt="A person working out">
+      </div>
+
+      <!-- Right Box -->
+      <div class="container02">
+        <h2>Benefits You Get</h2>
+        <ul>
+          <li>✅ Personalized training plans from certified professionals</li>
+          <li>✅ Access to the latest fitness machines for strength, cardio & flexibility</li>
+          <li>✅ A supportive community that motivates and inspires you</li>
+          <li>✅ Dedicated space to help you stay consistent and disciplined</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

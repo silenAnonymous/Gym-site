@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GYM Site - Contact</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      color: #f0f0f0;
+      background: url("https://cdn.magicdecor.in/com/2023/10/13182750/I-love-gym-M.jpg") no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    /* Sticky Header */
+    .header {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 25px;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .left img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+
+    .logo-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .mid {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 18px;
+    }
+
+    .navbar li a {
+      padding: 10px 18px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar li a:hover {
+      color: #FFD700;
+      background: rgba(255, 215, 0, 0.2);
+    }
+
+    /* Original Button Styles (as requested) */
+    .right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn {
+      background: black;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background: gainsboro;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 100px);
+      padding: 40px 20px;
+    }
+
+    .contact-container {
+      width: 100%;
+      max-width: 500px;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      text-align: center;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .contact-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      color: #FFD700;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #FFD700;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #666;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #FFD700;
+      box-shadow: 0 0 8px #FFD700;
+    }
+
+    /* Submit Button */
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background: #FFD700;
+      color: black;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: #e6c200;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #FFD700;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-container {
+        padding: 25px;
+      }
+
+      .contact-container h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="left">
+      <img src="https://cdn.vectorstock.com/i/1000v/42/27/bodybuilder-male-figure-icon-gym-logo-template-vector-46454227.jpg"
+        alt="Gym Logo">
+      <div class="logo-text">Welcome to MY GYM </div>
+    </div>
+    <div class="mid">
+      <ul class="navbar">
+        <li><a href="01-Gym site.html">Home</a></li>
+        <li><a href="03-about.html">About</a></li>
+        <li><a href="04-Membership.html">Get Membership</a></li>
+        <li><a href="02-contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <button class="btn">Call us Now</button>
+      <button class="btn">Email us</button>
+    </div>
+  </header>
+
+  <main class="contact-section">
+    <div class="contact-container">
+      <h1>Get in Touch</h1>
+      <form action="noaction.php" method="post">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="e.g: John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="e.g: you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="contact">Phone Number</label>
+          <input type="tel" id="contact" name="contact" placeholder="e.g: 123-456-7890">
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
