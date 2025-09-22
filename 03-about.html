@@ -19,6 +19,25 @@
             padding: 0
         }
 
+        .ribbon {
+            position: fixed;
+            top: 20px;
+            right: -60px;
+            width: 200px;
+            background: red;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            transform: rotate(45deg);
+            z-index: 9999;
+            padding: 4px 0;
+            font-size: 0.85rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+            pointer-events: none;
+            /* 🔑 makes it “transparent” to clicks */
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: url("https://cdn.magicdecor.in/com/2023/10/13182750/I-love-gym-M.jpg") no-repeat center center/cover;
@@ -86,7 +105,7 @@
 
         .navbar a:hover {
             background: rgba(255, 215, 0, 0.3);
-      color: #FFD700;
+            color: #FFD700;
         }
 
         .right {
@@ -208,10 +227,21 @@
                 padding: 8px 12px
             }
         }
+
+        body::after {
+            content: "© Waji - My Gym";
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: rgba(255, 215, 0, 0.5);
+            pointer-events: none;
+        }
     </style>
 </head>
 
 <body>
+    <div class="ribbon">© Waji - My Gym</div>
     <header class="header">
         <div class="left">
             <img src="https://cdn.vectorstock.com/i/1000v/42/27/bodybuilder-male-figure-icon-gym-logo-template-vector-46454227.jpg"
@@ -221,7 +251,7 @@
 
         <nav class="mid" aria-label="Main navigation">
             <ul class="navbar" role="menubar" aria-hidden="false">
-                <li><a href="index.html" role="menuitem">Home</a></li>
+                <li><a href="01-Gym site.html" role="menuitem">Home</a></li>
                 <li><a href="03-about.html" role="menuitem">About</a></li>
                 <li><a href="04-Membership.html" role="menuitem">Get Membership online</a></li>
                 <li><a href="02-contact.html" role="menuitem">Contact us</a></li>
@@ -298,7 +328,9 @@
                 alt="Danail happy with progress">
         </article>
     </main>
+    <footer style="text-align:center; padding:15px; background:rgba(0,0,0,0.7); color:#FFD700; font-size:0.9rem;">
+        © 2025 My Gym | Designed by Waji
+    </footer>
 </body>
-
 
 </html>
