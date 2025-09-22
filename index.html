@@ -6,6 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GYM site</title>
   <style>
+.ribbon {
+  position: fixed;
+  top: 20px;
+  right: -60px;
+  width: 200px;
+  background: red;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  transform: rotate(45deg);
+  z-index: 9999;
+  padding: 4px 0;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  pointer-events: none; /* 🔑 makes it “transparent” to clicks */
+}
+
+
     body {
       margin: 0;
       padding: 0;
@@ -258,10 +277,22 @@
         font-size: 2.2rem;
       }
     }
+    body::after {
+  content: "© Waji - My Gym";
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: rgba(255, 215, 0, 0.5);
+  pointer-events: none;
+}
+
   </style>
 </head>
 
 <body>
+  <div class="ribbon">© Waji - My Gym</div>
+
   <!-- Navbar -->
   <header class="header">
     <div class="left">
@@ -271,7 +302,7 @@
     </div>
     <div class="mid">
       <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="01-Gym site.html">Home</a></li>
         <li><a href="03-about.html">About</a></li>
         <li><a href="04-Membership.html">Get Membership</a></li>
         <li><a href="02-contact.html">Contact</a></li>
@@ -315,7 +346,10 @@
       </div>
     </div>
   </main>
+  <footer style="text-align:center; padding:15px; background:rgba(0,0,0,0.7); color:#FFD700; font-size:0.9rem;">
+  © 2025 My Gym | Designed by Waji
+</footer>
+
 </body>
 
 </html>
-
