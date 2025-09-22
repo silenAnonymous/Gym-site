@@ -5,7 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Membership Plans</title>
+
   <style>
+    .ribbon {
+      position: fixed;
+      top: 20px;
+      right: -60px;
+      width: 200px;
+      background: red;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      transform: rotate(45deg);
+      z-index: 9999;
+      padding: 4px 0;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
@@ -193,6 +212,7 @@
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -203,6 +223,7 @@
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -216,19 +237,32 @@
         align-items: center;
       }
     }
+
+    body::after {
+      content: "© Waji - My Gym";
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+      color: rgba(255, 215, 0, 0.5);
+      pointer-events: none;
+    }
   </style>
 </head>
 
 <body>
+  <div class="ribbon">© Waji - My Gym</div>
   <!-- Navbar -->
   <header class="header">
     <div class="left">
-      <img src="https://cdn.vectorstock.com/i/1000v/42/27/bodybuilder-male-figure-icon-gym-logo-template-vector-46454227.jpg" alt="Gym Logo">
+      <img
+        src="https://cdn.vectorstock.com/i/1000v/42/27/bodybuilder-male-figure-icon-gym-logo-template-vector-46454227.jpg"
+        alt="Gym Logo">
       <div class="logo-text">Welcome To My Gym</div>
     </div>
     <div class="mid">
       <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="01-Gym site.html">Home</a></li>
         <li><a href="03-about.html">About</a></li>
         <li><a href="04-Membership.html">Get Membership</a></li>
         <li><a href="02-contact.html">Contact</a></li>
@@ -281,7 +315,9 @@
       </div>
     </section>
   </main>
+  <footer style="text-align:center; padding:15px; background:rgba(0,0,0,0.7); color:#FFD700; font-size:0.9rem;">
+    © 2025 My Gym | Designed by Waji
+  </footer>
 </body>
 
 </html>
-
