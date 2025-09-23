@@ -43,6 +43,7 @@
       padding: 12px 25px;
       background: rgba(0, 0, 0, 0.85);
       z-index: 1000;
+      flex-wrap: wrap;
     }
 
     .left {
@@ -75,6 +76,7 @@
       padding: 0;
       margin: 0;
       gap: 18px;
+      flex-wrap: wrap;
     }
 
     .navbar li a {
@@ -91,11 +93,12 @@
       background: rgba(255, 215, 0, 0.2);
     }
 
-    /* Original Button Styles (as requested) */
     .right {
       display: flex;
       gap: 10px;
       align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
     }
 
     .btn {
@@ -207,14 +210,70 @@
       }
     }
 
-    /* Responsive */
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .navbar {
+        gap: 10px;
+      }
+    }
+
     @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .mid {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .contact-container {
         padding: 25px;
       }
 
       .contact-container h1 {
         font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .left img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .logo-text {
+        font-size: 1rem;
+      }
+
+      .navbar li a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+      }
+
+      .btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+
+      .contact-container h1 {
+        font-size: 1.6rem;
+      }
+
+      .form-group input {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+
+      .submit-btn {
+        font-size: 1rem;
+        padding: 12px;
       }
     }
 
@@ -241,7 +300,7 @@
     </div>
     <div class="mid">
       <ul class="navbar">
-        <li><a href="01-Gym site.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="03-about.html">About</a></li>
         <li><a href="04-Membership.html">Get Membership</a></li>
         <li><a href="02-contact.html">Contact</a></li>
@@ -273,6 +332,7 @@
       </form>
     </div>
   </main>
+
   <footer style="text-align:center; padding:15px; background:rgba(0,0,0,0.7); color:#FFD700; font-size:0.9rem;">
     © 2025 My Gym | Designed by Waji
   </footer>
