@@ -6,24 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GYM site</title>
   <style>
-.ribbon {
-  position: fixed;
-  top: 20px;
-  right: -60px;
-  width: 200px;
-  background: red;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-  transform: rotate(45deg);
-  z-index: 9999;
-  padding: 4px 0;
-  font-size: 0.85rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  pointer-events: none; /* 🔑 makes it “transparent” to clicks */
-}
-
+    .ribbon {
+      position: fixed;
+      top: 20px;
+      right: -60px;
+      width: 200px;
+      background: red;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      transform: rotate(45deg);
+      z-index: 9999;
+      padding: 4px 0;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+    }
 
     body {
       margin: 0;
@@ -57,7 +56,6 @@
       border-radius: 50%;
     }
 
-    /* Restored: White text */
     .logo-text {
       margin-left: 12px;
       font-size: 1.3rem;
@@ -97,7 +95,6 @@
       gap: 10px;
     }
 
-    /* Restored: Black background, white text */
     .btn {
       background: black;
       color: white;
@@ -261,8 +258,46 @@
       }
     }
 
-    /* Responsive */
+    /* Responsive Fixes */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Tablets (landscape) */
+    @media (max-width: 1024px) {
+      .navbar {
+        gap: 10px;
+      }
+
+      .container01,
+      .container02 {
+        width: 80%;
+      }
+    }
+
+    /* Tablets (portrait) */
     @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .mid {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .right {
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+
       .content-wrapper {
         flex-direction: column;
         align-items: center;
@@ -270,23 +305,72 @@
 
       .container01,
       .container02 {
-        width: 90%;
+        width: 95%;
+        flex-direction: column;
+      }
+
+      .container01 img {
+        width: 100%;
+        margin-top: 15px;
       }
 
       main h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
     }
-    body::after {
-  content: "© Waji - My Gym";
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  font-size: 12px;
-  color: rgba(255, 215, 0, 0.5);
-  pointer-events: none;
-}
 
+    /* Mobile (small phones) */
+    @media (max-width: 480px) {
+      .header {
+        padding: 10px;
+      }
+
+      .left img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .logo-text {
+        font-size: 1rem;
+      }
+
+      .navbar li a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+      }
+
+      .btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+
+      main h1 {
+        font-size: 1.6rem;
+      }
+
+      #text-01 {
+        font-size: 1.2rem;
+      }
+
+      .text-02 {
+        font-size: 0.9rem;
+      }
+
+      .join-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+    }
+
+    body::after {
+      content: "© Waji - My Gym";
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+      color: rgba(255, 215, 0, 0.5);
+      pointer-events: none;
+    }
   </style>
 </head>
 
@@ -302,7 +386,7 @@
     </div>
     <div class="mid">
       <ul class="navbar">
-        <li><a href="01-Gym site.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="03-about.html">About</a></li>
         <li><a href="04-Membership.html">Get Membership</a></li>
         <li><a href="02-contact.html">Contact</a></li>
@@ -346,10 +430,11 @@
       </div>
     </div>
   </main>
-  <footer style="text-align:center; padding:15px; background:rgba(0,0,0,0.7); color:#FFD700; font-size:0.9rem;">
-  © 2025 My Gym | Designed by Waji
-</footer>
 
+  <!-- Footer -->
+  <footer style="text-align:center; padding:15px; background:rgba(0,0,0,0.7); color:#FFD700; font-size:0.9rem;">
+    © 2025 My Gym | Designed by Waji
+  </footer>
 </body>
 
 </html>
