@@ -2,335 +2,354 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>About — Success Stories</title>
-    <style>
-        :root {
-            --gold: #FFD700;
-            --gold-dark: #e6c200;
-            --overlay: rgba(0, 0, 0, 0.85);
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Success Stories</title>
+  <style>
+    :root {
+      --gold: #FFD700;
+      --gold-dark: #e6c200;
+      --overlay: rgba(0, 0, 0, 0.85);
+    }
 
-        /* Reset */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0
-        }
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
 
-        .ribbon {
-            position: fixed;
-            top: 20px;
-            right: -60px;
-            width: 200px;
-            background: red;
-            color: white;
-            text-align: center;
-            font-weight: bold;
-            font-family: Arial, sans-serif;
-            transform: rotate(45deg);
-            z-index: 9999;
-            padding: 4px 0;
-            font-size: 0.85rem;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-            pointer-events: none;
-            /* 🔑 makes it “transparent” to clicks */
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: url("https://cdn.magicdecor.in/com/2023/10/13182750/I-love-gym-M.jpg") no-repeat center center/cover;
+      background-attachment: fixed;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: url("https://cdn.magicdecor.in/com/2023/10/13182750/I-love-gym-M.jpg") no-repeat center center/cover;
-            background-attachment: fixed;
-            color: #fff;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+    .ribbon {
+      position: fixed;
+      top: 20px;
+      right: -60px;
+      width: 200px;
+      background: red;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      transform: rotate(45deg);
+      z-index: 9999;
+      padding: 4px 0;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+    }
 
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            padding: 12px 24px;
-            background: var(--overlay);
-        }
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 12px 24px;
+      background: var(--overlay);
+    }
 
-        .left {
-            display: flex;
-            align-items: center;
-            gap: 12px
-        }
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
 
-        .left img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            object-fit: cover
-        }
+    .left img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover
+    }
 
-        .logo-text {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: white
-        }
+    .logo-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white
+    }
 
-        .mid {
-            flex: 1;
-            text-align: center
-        }
+    .mid {
+      flex: 1;
+      text-align: center
+    }
 
-        .navbar {
-            display: flex;
-            gap: 18px;
-            list-style: none;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-            margin: 0
-        }
+    .navbar {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0
+    }
 
-        .navbar a {
-            display: inline-block;
-            padding: 10px 16px;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            border-radius: 25px;
-            transition: all .22s ease;
-        }
+    .navbar a {
+      display: inline-block;
+      padding: 10px 16px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 25px;
+      transition: all .22s ease;
+    }
 
-        .navbar a:hover {
-            background: rgba(255, 215, 0, 0.3);
-            color: #FFD700;
-        }
+    .navbar a:hover {
+      background: rgba(255, 215, 0, 0.3);
+      color: #FFD700;
+    }
 
-        .right {
-            display: flex;
-            gap: 10px;
-            align-items: center
-        }
+    .right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        .btn {
-            background: black;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 18px;
-            border: none;
-            cursor: pointer;
-            font-weight: 700;
-            transition: all .18s ease, all .18s ease;
-        }
+    .btn {
+      background: black;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 18px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all .18s ease;
+    }
 
-        .btn:hover {
-            background: gainsboro;
-            color: black;
-            transform: scale(1.05)
-        }
+    .btn:hover {
+      background: gainsboro;
+      color: black;
+      transform: scale(1.05)
+    }
 
-        /* Page header */
-        .page-header {
-            text-align: center;
-            padding: 48px 18px 8px;
-        }
+    /* Page header */
+    .page-header {
+      text-align: center;
+      padding: 48px 18px 8px;
+    }
 
-        .page-header h1 {
-            font-size: 2.6rem;
-            color: var(--gold);
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-            margin-bottom: 6px;
-        }
+    .page-header h1 {
+      font-size: 2.6rem;
+      color: var(--gold);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+      margin-bottom: 6px;
+    }
 
-        .page-header p {
-            color: gainsboro;
-            margin-bottom: 18px
-        }
+    .page-header p {
+      color: gainsboro;
+      margin-bottom: 18px;
+      font-size: 1.1rem;
+    }
 
-        /* Stories list */
-        .gallery-wrap {
-            max-width: 1100px;
-            margin: 22px auto;
-            padding: 18px;
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
+    /* Stories list */
+    .gallery-wrap {
+      max-width: 1100px;
+      margin: 22px auto;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
 
-        .story {
-            display: flex;
-            gap: 18px;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 18px;
-            border-radius: 12px;
-            transition: transform .22s ease, box-shadow .22s ease;
-            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
-        }
+    .story {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 18px;
+      border-radius: 12px;
+      transition: transform .22s ease, box-shadow .22s ease;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+    }
 
-        .story:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6)
-        }
+    .story:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6)
+    }
 
-        .story .text {
-            flex: 1;
-            color: #eee;
-            line-height: 1.5;
-            font-size: 1rem;
-        }
+    .story .text {
+      flex: 1;
+      color: #eee;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
 
-        .story .text h3 {
-            color: var(--gold);
-            margin-bottom: 8px;
-            font-size: 1.05rem
-        }
+    .story .text h3 {
+      color: var(--gold);
+      margin-bottom: 8px;
+      font-size: 1.05rem
+    }
 
-        .story img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            flex-shrink: 0;
-            border: 3px solid rgba(255, 255, 255, 0.06);
-        }
+    .story img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      flex-shrink: 0;
+      border: 3px solid rgba(255, 255, 255, 0.06);
+    }
 
-        /* Responsive: stack */
-        @media (max-width:880px) {
-            .story {
-                flex-direction: column;
-                align-items: flex-start
-            }
+    /* Responsive */
+    @media (max-width: 880px) {
+      .story {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-            .story img {
-                width: 100%;
-                height: 220px
-            }
-        }
+      .story img {
+        width: 100%;
+        height: 220px;
+      }
+    }
 
-        @media (max-width:480px) {
-            .page-header h1 {
-                font-size: 1.8rem
-            }
+    @media (max-width: 600px) {
+      .page-header h1 {
+        font-size: 2rem;
+      }
 
-            .logo-text {
-                font-size: 1rem
-            }
+      .page-header p {
+        font-size: 1rem;
+      }
 
-            .navbar a {
-                padding: 8px 10px
-            }
+      .logo-text {
+        font-size: 1rem;
+      }
 
-            .btn {
-                padding: 8px 12px
-            }
-        }
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-        body::after {
-            content: "© Waji - My Gym";
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            font-size: 12px;
-            color: rgba(255, 215, 0, 0.5);
-            pointer-events: none;
-        }
-    </style>
+      .navbar a {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .page-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .story .text {
+        font-size: 0.9rem;
+      }
+    }
+
+    body::after {
+      content: "© Waji - My Gym";
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+      color: rgba(255, 215, 0, 0.5);
+      pointer-events: none;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="ribbon">© Waji - My Gym</div>
-    <header class="header">
-        <div class="left">
-            <img src="https://cdn.vectorstock.com/i/1000v/42/27/bodybuilder-male-figure-icon-gym-logo-template-vector-46454227.jpg"
-                alt="Gym Logo">
-            <div class="logo-text">Welcome To My Gym</div> <!-- WHITE preserved -->
-        </div>
+  <div class="ribbon">© Waji - My Gym</div>
+  <header class="header">
+    <div class="left">
+      <img
+        src="https://cdn.vectorstock.com/i/1000v/42/27/bodybuilder-male-figure-icon-gym-logo-template-vector-46454227.jpg"
+        alt="Gym Logo">
+      <div class="logo-text">Welcome To My Gym</div>
+    </div>
 
-        <nav class="mid" aria-label="Main navigation">
-            <ul class="navbar" role="menubar" aria-hidden="false">
-                <li><a href="01-Gym site.html" role="menuitem">Home</a></li>
-                <li><a href="03-about.html" role="menuitem">About</a></li>
-                <li><a href="04-Membership.html" role="menuitem">Get Membership online</a></li>
-                <li><a href="02-contact.html" role="menuitem">Contact us</a></li>
-            </ul>
-        </nav>
+    <nav class="mid" aria-label="Main navigation">
+      <ul class="navbar" role="menubar" aria-hidden="false">
+        <li><a href="index.html" role="menuitem">Home</a></li>
+        <li><a href="03-about.html" role="menuitem">About</a></li>
+        <li><a href="04-Membership.html" role="menuitem">Get Membership</a></li>
+        <li><a href="02-contact.html" role="menuitem">Contact</a></li>
+      </ul>
+    </nav>
 
-        <div class="right">
-            <button class="btn" aria-label="Call us now">Call us Now</button> <!-- BLACK / WHITE preserved -->
-            <button class="btn" aria-label="Email us">Email us</button> <!-- BLACK / WHITE preserved -->
-        </div>
-    </header>
+    <div class="right">
+      <button class="btn" aria-label="Call us now">Call us Now</button>
+      <button class="btn" aria-label="Email us">Email us</button>
+    </div>
+  </header>
 
-    <header class="page-header">
-        <h1>Our Success Stories</h1>
-        <p>Real transformations. Real people. Read stories from members who changed their lives here.</p>
-    </header>
+  <header class="page-header">
+    <h1>Our Success Stories</h1>
+    <p>Real transformations. Real people. Read stories from members who changed their lives here.</p>
+  </header>
 
-    <main class="gallery-wrap" aria-live="polite">
-        <article class="story">
-            <div class="text">
-                <h3>Ali:</h3>
-                When I first joined, I struggled to even lift a dumbbell. With the guidance of the trainers, I built a
-                routine that worked for me. In just 8 months, I lost 15kg, gained strength, and feel more confident than
-                ever. This gym isn't just about workouts, it's about building a better lifestyle.
-            </div>
-            <img src="https://sfycdn.speedsize.com/2780c694-3419-4266-9652-d242439affeb/stateandliberty.com/cdn/shop/articles/unnamed_28f24980-76c2-4765-88cc-99fd9334993c.jpg?v=1636494373&width=1500"
-                alt="Ali before/after">
-        </article>
+  <main class="gallery-wrap" aria-live="polite">
+    <article class="story">
+      <div class="text">
+        <h3>Ali:</h3>
+        When I first joined, I struggled to even lift a dumbbell. With the guidance of the trainers, I built a routine
+        that worked for me. In just 8 months, I lost 15kg, gained strength, and feel more confident than ever.
+      </div>
+      <img src="https://sfycdn.speedsize.com/2780c694-3419-4266-9652-d242439affeb/stateandliberty.com/cdn/shop/articles/unnamed_28f24980-76c2-4765-88cc-99fd9334993c.jpg?v=1636494373&width=1500"
+        alt="Ali before/after">
+    </article>
 
-        <article class="story">
-            <div class="text">
-                <h3>Hamza:</h3>
-                I used to be underweight and had no idea where to start. The trainers designed a strength building plan
-                for me, and step by step I started seeing results. After one year, I've gained 12kg of lean muscle and
-                feel
-                stronger than ever. Joining this gym was the best decision of my life.
-            </div>
-            <img src="https://aspire.pk/cdn/shop/files/0_4_9ecb0aec-9e63-4e25-b8e2-66fd8b5b9392.jpg?v=1711420183"
-                alt="Hamza training">
-        </article>
+    <article class="story">
+      <div class="text">
+        <h3>Hamza:</h3>
+        I used to be underweight and had no idea where to start. The trainers designed a strength building plan for me.
+        After one year, I've gained 12kg of lean muscle and feel stronger than ever.
+      </div>
+      <img src="https://aspire.pk/cdn/shop/files/0_4_9ecb0aec-9e63-4e25-b8e2-66fd8b5b9392.jpg?v=1711420183"
+        alt="Hamza training">
+    </article>
 
-        <article class="story">
-            <div class="text">
-                <h3>Bilal:</h3>
-                I used to feel tired all the time and couldn't even climb stairs without losing breath. With consistent
-                training and cardio sessions, I lost 18kg in 7 months. Today, I can run 5km without stopping, and I feel
-                more alive, energetic, and confident than ever.
-            </div>
-            <img src="https://www.alay.co/cdn/shop/files/1_edf2d868-0737-4775-8244-031ecdcc32fc.jpg?v=1748601685&width=2000"
-                alt="Bilal running">
-        </article>
+    <article class="story">
+      <div class="text">
+        <h3>Bilal:</h3>
+        I used to feel tired all the time. With consistent training and cardio sessions, I lost 18kg in 7 months. Today,
+        I can run 5km without stopping and feel more alive than ever.
+      </div>
+      <img src="https://www.alay.co/cdn/shop/files/1_edf2d868-0737-4775-8244-031ecdcc32fc.jpg?v=1748601685&width=2000"
+        alt="Bilal running">
+    </article>
 
-        <article class="story">
-            <div class="text">
-                <h3>Alex:</h3>
-                After a knee injury, I thought I'd never be able to play football again. The rehab program and strength
-                training at this gym helped me recover safely. Now I'm not only back on the field but stronger and
-                faster
-                than I was before. Truly life changing.
-            </div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuyOJwWrIud_XMur35EQdmuBDOXYNUznoYUw&s"
-                alt="Alex training">
-        </article>
+    <article class="story">
+      <div class="text">
+        <h3>Alex:</h3>
+        After a knee injury, I thought I'd never be able to play football again. The rehab program at this gym helped me
+        recover. Now I'm back on the field stronger and faster than before.
+      </div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuyOJwWrIud_XMur35EQdmuBDOXYNUznoYUw&s"
+        alt="Alex training">
+    </article>
 
-        <article class="story">
-            <div class="text">
-                <h3>Danail:</h3>
-                My goal wasn't just to lose weight, but to live healthier. The nutrition advice combined with regular
-                workouts helped me drop 10kg and reduce my sugar levels naturally. I have more stamina to play with my
-                kids,
-                and I feel proud of my progress.
-            </div>
-            <img src="https://i.pinimg.com/474x/29/b8/f6/29b8f64aaaf8784a9828a1283c13d9b8.jpg"
-                alt="Danail happy with progress">
-        </article>
-    </main>
-    <footer style="text-align:center; padding:15px; background:rgba(0,0,0,0.7); color:#FFD700; font-size:0.9rem;">
-        © 2025 My Gym | Designed by Waji
-    </footer>
+    <article class="story">
+      <div class="text">
+        <h3>Danail:</h3>
+        My goal wasn’t just to lose weight but to live healthier. The nutrition advice plus regular workouts helped me
+        drop 10kg and improve my sugar levels. Now I have more energy to play with my kids.
+      </div>
+      <img src="https://i.pinimg.com/474x/29/b8/f6/29b8f64aaaf8784a9828a1283c13d9b8.jpg"
+        alt="Danail happy with progress">
+    </article>
+  </main>
+
+  <footer style="text-align:center; padding:15px; background:rgba(0,0,0,0.7); color:#FFD700; font-size:0.9rem;">
+    © 2025 My Gym | Designed by Waji
+  </footer>
 </body>
 
 </html>
